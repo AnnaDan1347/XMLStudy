@@ -90,7 +90,6 @@ public class Text extends BaseObject {
             for (ISentenceObject word : ((Sentence) sentence).getiSentenceObject()) {
                 Word currentWord = (Word) word;
                 if (wordRange.containsKey(currentWord.getWholeText())) {
-
                     WordInSentence currentWordRange = wordRange.get(currentWord.getWholeText());
                     currentWordRange.increaseCount();
                     currentWordRange.addSentenceWithWord((Sentence) sentence);
@@ -106,23 +105,26 @@ public class Text extends BaseObject {
         return wordRange;
     }
 
-    public String getWordWithMaxRange(HashMap<String, WordInSentence> wordRange) {
-        String wordWithMaxRange = null;
+    public ArrayList<String> getWordWithMaxRange(HashMap<String, WordInSentence> wordRange) {
         int maxRange = 0;
-
+        ArrayList<String> listWithMaxRange = new ArrayList<>();
         for (String word : wordRange.keySet()) {
             WordInSentence wordInSentence = wordRange.get(word);
-            if (wordWithMaxRange == null) {
-                wordWithMaxRange = word;
+            if (listWithMaxRange.isEmpty()) {
+                listWithMaxRange.add(word);
                 maxRange = wordInSentence.getCount();
-
             } else {
                 if (maxRange < wordInSentence.getCount()) {
                     maxRange = wordInSentence.getCount();
-                    wordWithMaxRange = word;
+                    listWithMaxRange.clear();
+                    listWithMaxRange.add(word);
+                } else {
+                    if (maxRange == wordInSentence.getCount()) {
+                        listWithMaxRange.add(word);
+                    }
                 }
             }
         }
-        return wordWithMaxRange;
+        return listWithMaxRange;
     }
 }

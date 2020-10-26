@@ -24,7 +24,7 @@ public class SentenceParser {
     final static EnumSet<Punctuation> nonSentencePunctuation = EnumSet.complementOf(sentencePunctuation);
     final static EnumSet<Punctuation> allPunctuation = EnumSet.allOf(Punctuation.class);
 
-    private static final String FILE_LOCATION = "ThinkingInJava2.txt";
+    private static final String FILE_LOCATION = "src/resourses/ThinkingInJava.txt";
 
     public void run() {
         Text currentText = new Text(FILE_LOCATION);
@@ -39,11 +39,12 @@ public class SentenceParser {
 
         HashMap<String, WordInSentence> wordRange = currentText.calculateWordRange(iSentenceObject);
 
-        String wordWithMaxRange = currentText.getWordWithMaxRange(wordRange);
-        System.out.println(String.format("Word with maximum range: %s", wordWithMaxRange));
-        WordInSentence wordInSentence = wordRange.get(wordWithMaxRange);
-        System.out.println(
-                String.format("Number of sentences with at least one similar word: %d", wordInSentence.getCount()));
-
+        ArrayList<String> listWithMaxRange = currentText.getWordWithMaxRange(wordRange);
+        for (int i = 0; i < listWithMaxRange.size(); i++) {
+            System.out.println(String.format("Word with maximum range: %s", listWithMaxRange.get(i)));
+            WordInSentence wordInSentence = wordRange.get(listWithMaxRange.get(i));
+            System.out.println(String.format("Number of sentences with at least one similar word: %d",
+                    (wordInSentence.getCount())));
+        }
     }
 }

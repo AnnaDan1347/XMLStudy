@@ -49,5 +49,4 @@ public class Sentence extends BaseObject {
             }
         }
     }
-
 }
