@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<greenhouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.example.org/vauchers" xsi:schemaLocation="http://www.example.org/vauchers vauchers.xsd">
+<greenHouse
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.example.org/vauchers"
+    xsi:schemaLocation="greenHouse.xsd">
     <plant id="a&amp;1">
-        <name><![CDATA[тур <выходного> дня]]></name>
-        <soil>Бразилия</soil>
-        <origin>4</origin>
-        <visual>AVIA</visual>
-        <growingTips>2000</growingTips>
-        <multiplying>
-            <stars>4</stars>
-            <tv>true</tv>
-            <food>HB</food>
-        </multiplying>
+        <name>rose</name>
+        <soil>SOD_PODZOLIC</soil>
+        <origin>Netherlands</origin>
+        <visual>
+            <stemColor>dark green</stemColor>
+            <leafColor>dark green</leafColor>
+            <averagePlantSize>30</averagePlantSize>
+        </visual>
+        <growingTips>
+            <temperatureDegree>15</temperatureDegree>
+            <lighting>LIGHT_REQUIRING</lighting>
+            <wateringMlPerWeek>300</wateringMlPerWeek>
+        </growingTips>
+        <multiplying>CUTTING</multiplying>
     </plant>
-    <vaucher id="a&amp;2">
-        <type>экскурсионный тур</type>
-        <country>Литва</country>
-        <days>10</days>
-        <transport>RAILWAY</transport>
-        <cost>2100</cost>
-        <hotel-characteristics>
-            <stars>3</stars>
-            <tv>false</tv>
-        </hotel-characteristics>
-    </vaucher>
-    <vaucher id="a&amp;3">
-        <type>паломничество</type>
-        <country>Антарктида</country>
-        <days nights="+1">0</days>
-        <transport>SHIP</transport>
-        <cost>1950</cost>
-        <hotel-characteristics>
-            <tv>false</tv>
-        </hotel-characteristics>
-    </vaucher>
+    <plant id="a&amp;2">
+        <name>ficus</name>
+        <soil>GROUND</soil>
+        <origin>Malaysia</origin>
+        <visual>
+            <stemColor>light brown</stemColor>
+            <leafColor>light green</leafColor>
+            <averagePlantSize>40</averagePlantSize>
+        </visual>
+        <growingTips>
+            <temperatureDegree>15</temperatureDegree>
+            <lighting>NOTLIGHT-REQUIRING</lighting>
+            <wateringMlPerWeek>500</wateringMlPerWeek>
+        </growingTips>
+        <multiplying>BYLEAVES</multiplying>
+    </plant>
+    <plant id="a&amp;3">
+        <name>muraya</name>
+        <soil>PODZOLIC</soil>
+        <origin>Japan</origin>
+        <visual>
+            <stemColor>light brown</stemColor>
+            <leafColor>dark green</leafColor>
+            <averagePlantSize>15</averagePlantSize>
+        </visual>
+        <growingTips>
+            <temperatureDegree>15</temperatureDegree>
+            <lighting>NOTLIGHT-REQUIRING</lighting>
+            <wateringMlPerWeek>250</wateringMlPerWeek>
+        </growingTips>
+        <multiplying>BYSEEDS</multiplying>
+    </plant>
 </greenhouse>

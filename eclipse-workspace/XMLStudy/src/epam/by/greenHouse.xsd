@@ -8,7 +8,7 @@
             <sequence>
                 <element name="plant" maxOccurs="unbounded">
                     <complexType>
-                        <sequence>                        
+                        <sequence>
                             <element name="name" type="string" />
                             <element name="soil">
                                 <simpleType>
@@ -19,7 +19,7 @@
                                         <enumeration
                                             value="GROUND" />
                                         <enumeration
-                                            value="SOD-PODZOLIC" />
+                                            value="SOD_PODZOLIC" />
                                     </restriction>
                                 </simpleType>
                             </element>
@@ -29,10 +29,12 @@
                                     <sequence>
                                         <element
                                             name="stemColor"
-                                            type="string" />
+                                            type="string"
+                                            default="green" />
                                         <element
                                             name="leafColor"
-                                            type="string" />
+                                            type="string"
+                                            default="green" />
                                         <element
                                             name="averagePlantSize"
                                             type="positiveInteger" />
@@ -43,14 +45,24 @@
                                 <complexType>
                                     <sequence>
                                         <element
-                                            name="temperatureDegree"
-                                            type="integer" />
+                                            name="temperatureDegree">
+                                            <simpleType>
+                                                <restriction
+                                                    base="integer">
+                                                    <minInclusive
+                                                        value="1" />
+                                                    <maxInclusive
+                                                        value="30" />
+                                                </restriction>
+                                            </simpleType>
+
+                                        </element>
                                         <element name="lighting">
                                             <simpleType>
                                                 <restriction
                                                     base="string">
                                                     <enumeration
-                                                        value="LIGHT-REQUIRING" />
+                                                        value="LIGHT_REQUIRING" />
                                                     <enumeration
                                                         value="NOTLIGHT-REQUIRING" />
                                                 </restriction>
@@ -76,6 +88,8 @@
                                 </simpleType>
                             </element>
                         </sequence>
+                        <attribute name="id" type="string"
+                            use="required" />
                     </complexType>
                 </element>
             </sequence>
