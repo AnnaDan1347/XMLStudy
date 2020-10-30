@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/vauchers"
+    xmlns:tns="http://www.example.org/vauchers"
+    elementFormDefault="qualified">
+    <element name="greenhouse">
+        <complexType>
+            <sequence>
+                <element name="plant" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>                        
+                            <element name="name" type="string" />
+                            <element name="soil">
+                                <simpleType>
+                                    <restriction
+                                        base="string">
+                                        <enumeration
+                                            value="PODZOLIC" />
+                                        <enumeration
+                                            value="GROUND" />
+                                        <enumeration
+                                            value="SOD-PODZOLIC" />
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="origin" type="string" />
+                            <element name="visual">
+                                <complexType>
+                                    <sequence>
+                                        <element
+                                            name="stemColor"
+                                            type="string" />
+                                        <element
+                                            name="leafColor"
+                                            type="string" />
+                                        <element
+                                            name="averagePlantSize"
+                                            type="positiveInteger" />
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="growingTips">
+                                <complexType>
+                                    <sequence>
+                                        <element
+                                            name="temperatureDegree"
+                                            type="integer" />
+                                        <element name="lighting">
+                                            <simpleType>
+                                                <restriction
+                                                    base="string">
+                                                    <enumeration
+                                                        value="LIGHT-REQUIRING" />
+                                                    <enumeration
+                                                        value="NOTLIGHT-REQUIRING" />
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element
+                                            name="wateringMlPerWeek"
+                                            type="positiveInteger" />
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="multiplying">
+                                <simpleType>
+                                    <restriction
+                                        base="string">
+                                        <enumeration
+                                            value="BYLEAVES" />
+                                        <enumeration
+                                            value="CUTTING" />
+                                        <enumeration
+                                            value="BYSEEDS" />
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
