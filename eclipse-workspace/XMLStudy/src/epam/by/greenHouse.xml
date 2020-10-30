@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <greenHouse
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.example.org/vauchers"
-    xsi:schemaLocation="greenHouse.xsd">
+    xmlns="http://www.example.org/greenHouse"
+    xsi:schemaLocation="https://github.com/AnnaDan1347/XMLStudy/blob/master/eclipse-workspace/XMLStudy/src/epam/by/greenHouse.xsd">
     <plant id="a&amp;1">
         <name>rose</name>
         <soil>SOD_PODZOLIC</soil>

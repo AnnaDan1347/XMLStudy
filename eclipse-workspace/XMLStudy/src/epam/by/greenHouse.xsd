@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.example.org/vauchers"
-    xmlns:tns="http://www.example.org/vauchers"
+    targetNamespace="http://www.example.org/greenhouse"
+    xmlns:tns="http://www.example.org/greenhouse"
     elementFormDefault="qualified">
     <element name="greenhouse">
         <complexType>
@@ -31,10 +31,7 @@
                                             name="stemColor"
                                             type="string"
                                             default="green" />
-                                        <element
-                                            name="leafColor"
-                                            type="string"
-                                            default="green" />
+                                        <element name="leafColor" type="string" default="green" />
                                         <element
                                             name="averagePlantSize"
                                             type="positiveInteger" />
@@ -55,7 +52,6 @@
                                                         value="30" />
                                                 </restriction>
                                             </simpleType>
-
                                         </element>
                                         <element name="lighting">
                                             <simpleType>
