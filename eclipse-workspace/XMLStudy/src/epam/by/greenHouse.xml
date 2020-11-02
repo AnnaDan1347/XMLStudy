@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<greenHouse
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.example.org/greenHouse"
-    xsi:schemaLocation="https://github.com/AnnaDan1347/XMLStudy/blob/master/eclipse-workspace/XMLStudy/src/epam/by/greenHouse.xsd">
+<!DOCTYPE xml>
+<greenHouse xmlns="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="http://www.example.org/greenHouse" xsi:schemaLocation="http://www.example.org/greenHouse greenHouse.xsd">
     <plant id="a&amp;1">
         <name>rose</name>
         <soil>SOD_PODZOLIC</soil>
@@ -14,7 +13,7 @@
         </visual>
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
-            <lighting>LIGHT_REQUIRING</lighting>
+            <lighting>true</lighting>
             <wateringMlPerWeek>300</wateringMlPerWeek>
         </growingTips>
         <multiplying>CUTTING</multiplying>
@@ -30,7 +29,7 @@
         </visual>
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
-            <lighting>NOTLIGHT-REQUIRING</lighting>
+            <lighting>false</lighting>
             <wateringMlPerWeek>500</wateringMlPerWeek>
         </growingTips>
         <multiplying>BYLEAVES</multiplying>
@@ -46,9 +45,9 @@
         </visual>
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
-            <lighting>NOTLIGHT-REQUIRING</lighting>
+            <lighting>false</lighting>
             <wateringMlPerWeek>250</wateringMlPerWeek>
         </growingTips>
         <multiplying>BYSEEDS</multiplying>
     </plant>
-</greenhouse>
+</greenHouse>

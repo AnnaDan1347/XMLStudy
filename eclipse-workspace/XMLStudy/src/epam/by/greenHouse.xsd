@@ -1,94 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.example.org/greenhouse"
-    xmlns:tns="http://www.example.org/greenhouse"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/greenHouse"
+    xmlns="http://www.example.org/greenHouse"
     elementFormDefault="qualified">
-    <element name="greenhouse">
-        <complexType>
-            <sequence>
-                <element name="plant" maxOccurs="unbounded">
-                    <complexType>
-                        <sequence>
-                            <element name="name" type="string" />
-                            <element name="soil">
-                                <simpleType>
-                                    <restriction
-                                        base="string">
-                                        <enumeration
-                                            value="PODZOLIC" />
-                                        <enumeration
+    <xsd:element name="greenHouse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="plant"
+                    maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="name"
+                                type="xsd:string" />
+                            <xsd:element name="soil">
+                                <xsd:simpleType>
+                                    <xsd:restriction
+                                        base="xsd:string">
+                                        <xsd:enumeration
+                                        value="PODZOLIC" />
+                                        <xsd:enumeration
                                             value="GROUND" />
-                                        <enumeration
+                                        <xsd:enumeration
                                             value="SOD_PODZOLIC" />
-                                    </restriction>
-                                </simpleType>
-                            </element>
-                            <element name="origin" type="string" />
-                            <element name="visual">
-                                <complexType>
-                                    <sequence>
-                                        <element
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="origin"
+                                type="xsd:string" />
+                            <xsd:element name="visual">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element
                                             name="stemColor"
-                                            type="string"
+                                            type="xsd:string"
                                             default="green" />
-                                        <element name="leafColor" type="string" default="green" />
-                                        <element
+                                        <xsd:element
+                                            name="leafColor"
+                                            type="xsd:string"
+                                            default="green" />
+                                        <xsd:element
                                             name="averagePlantSize"
-                                            type="positiveInteger" />
-                                    </sequence>
-                                </complexType>
-                            </element>
-                            <element name="growingTips">
-                                <complexType>
-                                    <sequence>
-                                        <element
+                                            type="xsd:positiveInteger" />
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="growingTips">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element
                                             name="temperatureDegree">
-                                            <simpleType>
-                                                <restriction
-                                                    base="integer">
-                                                    <minInclusive
+                                            <xsd:simpleType>
+                                                <xsd:restriction
+                                                    base="xsd:integer">
+                                                    <xsd:minInclusive
                                                         value="1" />
-                                                    <maxInclusive
+                                                    <xsd:maxInclusive
                                                         value="30" />
-                                                </restriction>
-                                            </simpleType>
-                                        </element>
-                                        <element name="lighting">
-                                            <simpleType>
-                                                <restriction
-                                                    base="string">
-                                                    <enumeration
-                                                        value="LIGHT_REQUIRING" />
-                                                    <enumeration
-                                                        value="NOTLIGHT-REQUIRING" />
-                                                </restriction>
-                                            </simpleType>
-                                        </element>
-                                        <element
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element
+                                            name="lighting" type="xsd:boolean"/>
+                                        <xsd:element
                                             name="wateringMlPerWeek"
-                                            type="positiveInteger" />
-                                    </sequence>
-                                </complexType>
-                            </element>
-                            <element name="multiplying">
-                                <simpleType>
-                                    <restriction
-                                        base="string">
-                                        <enumeration
+                                            type="xsd:positiveInteger" />
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="multiplying">
+                                <xsd:simpleType>
+                                    <xsd:restriction
+                                        base="xsd:string">
+                                        <xsd:enumeration
                                             value="BYLEAVES" />
-                                        <enumeration
+                                        <xsd:enumeration
                                             value="CUTTING" />
-                                        <enumeration
+                                        <xsd:enumeration
                                             value="BYSEEDS" />
-                                    </restriction>
-                                </simpleType>
-                            </element>
-                        </sequence>
-                        <attribute name="id" type="string"
-                            use="required" />
-                    </complexType>
-                </element>
-            </sequence>
-        </complexType>
-    </element>
-</schema>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="id"
+                            type="xsd:string" use="required" />
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
