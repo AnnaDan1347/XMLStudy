@@ -14,7 +14,7 @@
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
             <lighting>true</lighting>
-            <wateringMlPerWeek>300</wateringMlPerWeek>
+            <wateringPerWeek>300</wateringPerWeek>
         </growingTips>
         <multiplying>CUTTING</multiplying>
     </plant>
@@ -30,7 +30,7 @@
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
             <lighting>false</lighting>
-            <wateringMlPerWeek>500</wateringMlPerWeek>
+            <wateringPerWeek>500</wateringPerWeek>
         </growingTips>
         <multiplying>BYLEAVES</multiplying>
     </plant>
@@ -46,7 +46,7 @@
         <growingTips>
             <temperatureDegree>15</temperatureDegree>
             <lighting>false</lighting>
-            <wateringMlPerWeek>250</wateringMlPerWeek>
+            <wateringPerWeek>250</wateringPerWeek>
         </growingTips>
         <multiplying>BYSEEDS</multiplying>
     </plant>

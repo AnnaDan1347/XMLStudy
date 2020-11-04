@@ -3,6 +3,15 @@ package epam.by.application;
 public abstract class AGrowingTips {
     private String name;
     private String tips;
+    private String element;
+
+    public String getElement() {
+        return element;
+    }
+
+    public void setElement(String element) {
+        this.element = element;
+    }
 
     public AGrowingTips(String name) {
         this.name = name;
@@ -10,6 +19,10 @@ public abstract class AGrowingTips {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTips() {

@@ -1,10 +1,11 @@
 package epam.by.application;
 
+
 public enum Soil {
-    PODZOLIC ("подзолистая"),
-    GROUND ("грунтовая"),
-    SOD_PODZOLIC ("дерново-подзолистая");
-    
+    PODZOLIC ("Подзолистая"),
+    GROUND ("Грунтовая"),
+    SOD_PODZOLIC ("Дерново-подзолистая");
+  
     private String type;
 
     public String getType() {
@@ -13,7 +14,5 @@ public enum Soil {
 
     private Soil(String type) {
         this.type = type;
-    }
-    
-
+    }    
 }
